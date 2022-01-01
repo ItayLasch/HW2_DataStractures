@@ -1,0 +1,8 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "type_traits": "cpp",
+        "memory": "cpp",
+        "xiosbase": "cpp"
+    }
+}
