@@ -117,41 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Test1
+# Target rules for targets named GameControlProgram
 
 # Build rule for target.
-Test1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Test1
-.PHONY : Test1
+GameControlProgram: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GameControlProgram
+.PHONY : GameControlProgram
 
 # fast build rule for target.
-Test1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/build
-.PHONY : Test1/fast
+GameControlProgram/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/build
+.PHONY : GameControlProgram/fast
 
-test_rank_tree.obj: test_rank_tree.cpp.obj
-.PHONY : test_rank_tree.obj
+GameControl.obj: GameControl.cpp.obj
+.PHONY : GameControl.obj
 
 # target to build an object file
-test_rank_tree.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/test_rank_tree.cpp.obj
-.PHONY : test_rank_tree.cpp.obj
+GameControl.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj
+.PHONY : GameControl.cpp.obj
 
-test_rank_tree.i: test_rank_tree.cpp.i
-.PHONY : test_rank_tree.i
+GameControl.i: GameControl.cpp.i
+.PHONY : GameControl.i
 
 # target to preprocess a source file
-test_rank_tree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/test_rank_tree.cpp.i
-.PHONY : test_rank_tree.cpp.i
+GameControl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/GameControl.cpp.i
+.PHONY : GameControl.cpp.i
 
-test_rank_tree.s: test_rank_tree.cpp.s
-.PHONY : test_rank_tree.s
+GameControl.s: GameControl.cpp.s
+.PHONY : GameControl.s
 
 # target to generate assembly for a file
-test_rank_tree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/test_rank_tree.cpp.s
-.PHONY : test_rank_tree.cpp.s
+GameControl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/GameControl.cpp.s
+.PHONY : GameControl.cpp.s
+
+library2.obj: library2.cpp.obj
+.PHONY : library2.obj
+
+# target to build an object file
+library2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/library2.cpp.obj
+.PHONY : library2.cpp.obj
+
+library2.i: library2.cpp.i
+.PHONY : library2.i
+
+# target to preprocess a source file
+library2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/library2.cpp.i
+.PHONY : library2.cpp.i
+
+library2.s: library2.cpp.s
+.PHONY : library2.s
+
+# target to generate assembly for a file
+library2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/library2.cpp.s
+.PHONY : library2.cpp.s
+
+main2.obj: main2.cpp.obj
+.PHONY : main2.obj
+
+# target to build an object file
+main2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/main2.cpp.obj
+.PHONY : main2.cpp.obj
+
+main2.i: main2.cpp.i
+.PHONY : main2.i
+
+# target to preprocess a source file
+main2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/main2.cpp.i
+.PHONY : main2.cpp.i
+
+main2.s: main2.cpp.s
+.PHONY : main2.s
+
+# target to generate assembly for a file
+main2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/main2.cpp.s
+.PHONY : main2.cpp.s
 
 # Help Target
 help:
@@ -161,10 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Test1"
-	@echo "... test_rank_tree.obj"
-	@echo "... test_rank_tree.i"
-	@echo "... test_rank_tree.s"
+	@echo "... GameControlProgram"
+	@echo "... GameControl.obj"
+	@echo "... GameControl.i"
+	@echo "... GameControl.s"
+	@echo "... library2.obj"
+	@echo "... library2.i"
+	@echo "... library2.s"
+	@echo "... main2.obj"
+	@echo "... main2.i"
+	@echo "... main2.s"
 .PHONY : help
 
 

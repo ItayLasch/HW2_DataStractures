@@ -1,29 +1,20 @@
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
+#include <exception>
 
-class EmptyDataSystem : public std::exception
+class InvalidInput : public std::exception
 {
 };
+
 class NullArg : public std::exception
 {
 };
-class PlayerNotExsist : public std::exception
+
+class NotExist : public std::exception
 {
 };
 
-class PlayerExist : public std::exception
-{
-};
-
-class GroupNotExist : public std::exception
-{
-};
-
-class GroupExist : public std::exception
-{
-};
-
-class NotEnoughGroups : public std::exception
+class AlreadyExist : public std::exception
 {
 };
 
@@ -31,7 +22,12 @@ class OutOfBounds : public std::exception
 {
 };
 
-class InfinitLoop : public std::exception
+class InfiniteLoop : public std::exception
 {
 };
+
+class FAIL : public std::exception
+{
+};
+
 #endif

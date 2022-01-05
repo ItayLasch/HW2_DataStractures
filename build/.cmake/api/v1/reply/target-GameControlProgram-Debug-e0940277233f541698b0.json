@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Test1.exe"
+			"path" : "GameControlProgram.exe"
 		},
 		{
-			"path" : "Test1.pdb"
+			"path" : "GameControlProgram.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -55,11 +55,13 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
-	"id" : "Test1::@6890427a1f51a3e7e1df",
+	"id" : "GameControlProgram::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -79,8 +81,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Test1",
-	"nameOnDisk" : "Test1.exe",
+	"name" : "GameControlProgram",
+	"nameOnDisk" : "GameControlProgram.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -92,7 +94,9 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1,
+				2
 			]
 		}
 	],
@@ -101,7 +105,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test_rank_tree.cpp",
+			"path" : "main2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "library2.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "GameControl.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

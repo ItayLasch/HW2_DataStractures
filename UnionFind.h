@@ -17,12 +17,12 @@ class UnionFind
             count++;
         }
         if(count == 2*this->num_of_elements){
-            throw InfinitLoop();
+            throw InfiniteLoop();
         }
         return temp;
     }
     public:
-    UnionFind (int k){
+    UnionFind (int k = 100){
         num_of_elements = k + 1;
         parents_arr = new int[num_of_elements];
         size_arr = new int[num_of_elements];
@@ -97,7 +97,7 @@ class UnionFind
             count++;
         }
         if(count == 2*this->num_of_elements){
-            throw InfinitLoop();
+            throw InfiniteLoop();
         }
         int p_parent;
         for(int i = 0; i < count; i++){

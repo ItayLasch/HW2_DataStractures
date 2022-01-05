@@ -14,12 +14,12 @@ class Node
 {
     Key key;
     T data;
+    int value;
     Node<T, Key> *left;
     Node<T, Key> *right;
     Node<T, Key> *parent;
     int height;
     int sub_tree_size;
-    int value;
     int sum_elemets_sub_tree;
 
     Node(Key &key, const T &data, int value) : key(key), data(data), left(nullptr), right(nullptr), parent(nullptr), height(0), sub_tree_size(1),
@@ -385,23 +385,24 @@ class AVLTree
         return fixTree(curr);
     }
 
-    void inOrderToArraysAux(Node<T, Key> *curr, T *arrData, Key *arrKey, int size, int *index)
+    void inOrderToArraysAux(Node<T, Key> *curr, T *arrData, Key *arrKey, int *arrValue, int size, int *index)
     {
         if (curr == nullptr || *index >= size)
         {
             return;
         }
-        inOrderToArraysAux(curr->left, arrData, arrKey, size, index);
+        inOrderToArraysAux(curr->left, arrData, arrKey, arrValue, size, index);
         if (*index < size)
         {
             arrData[*(index)] = curr->data;
             arrKey[*(index)] = curr->key;
+            arrValue[*(index)] = curr->value;
             (*index)++;
         }
-        inOrderToArraysAux(curr->right, arrData, arrKey, size, index);
+        inOrderToArraysAux(curr->right, arrData, arrKey, arrValue, size, index);
     }
 
-    static Node<T, Key> *sortedArrayToBST_helper(T *arrData, Key *arrKey, int start, int end, int size_limit) // A - array of *Node
+    static Node<T, Key> *sortedArrayToBST_helper(T *arrData, Key *arrKey, int *arrValue ,int start, int end, int size_limit) // A - array of *Node
     {
         if (start > end)
         {
@@ -413,17 +414,17 @@ class AVLTree
         {
             return nullptr;
         }
-        Node<T, Key> *curr = new Node<T, Key>(arrKey[mid], arrData[mid]);
+        Node<T, Key> *curr = new Node<T, Key>(arrKey[mid], arrData[mid], arrValue[mid]);
 
-        curr->left = sortedArrayToBST_helper(arrData, arrKey, start, mid - 1, size_limit);
+        curr->left = sortedArrayToBST_helper(arrData, arrKey, arrValue, start, mid - 1, size_limit);
 
-        curr->right = sortedArrayToBST_helper(arrData, arrKey, mid + 1, end, size_limit);
+        curr->right = sortedArrayToBST_helper(arrData, arrKey, arrValue, mid + 1, end, size_limit);
         return curr;
     }
 
-    static void sortedArrayToBST(T *AData, Key *AKey, int n, AVLTree<T, Key> &new_tree)
+    static void sortedArrayToBST(T *AData, Key *AKey, int *arrValue, int n, AVLTree<T, Key> &new_tree)
     {
-        new_tree.root = sortedArrayToBST_helper(AData, AKey, 0, n, n);
+        new_tree.root = sortedArrayToBST_helper(AData, AKey, arrValue, 0, n, n);
 
         // update the merge tree elements heights
         new_tree.updateHeights(new_tree.root);
@@ -597,45 +598,55 @@ public:
         Key *arrKey1 = new Key[s1];
         Key *arrKey2 = new Key[s2];
         Key *arrKeyNew = new Key[s1 + s2];
-        tr1.inOrderToArrays(arrData1, arrKey1, s1);
-        tr2.inOrderToArrays(arrData2, arrKey2, s2);
+        int *arrValue1 = new int[s1];
+        int *arrValue2 = new int[s2];
+        int *arrValueNew = new int[s2 + s1];
+        tr1.inOrderToArrays(arrData1, arrKey1, arrValue1, s1);
+        tr2.inOrderToArrays(arrData2, arrKey2, arrValue2, s2);
         int index1 = 0, index2 = 0, index_new = 0;
         while (index_new < s1 + s2)
         { // merge the 2 arrays into 1
             if (index1 == s1)
             {
+                arrValueNew[index_new] = arrValue2[index2];
                 arrKeyNew[index_new] = arrKey2[index2];
                 arrDataNew[index_new++] = arrData2[index2++];
                 continue;
             }
             if (index2 == s2)
             {
+                arrValueNew[index_new] = arrValue1[index1];
                 arrKeyNew[index_new] = arrKey1[index1];
                 arrDataNew[index_new++] = arrData1[index1++];
                 continue;
             }
             if (arrKey1[index1] > arrKey2[index2])
             {
+                arrValueNew[index_new] = arrValue2[index2];
                 arrKeyNew[index_new] = arrKey2[index2];
                 arrDataNew[index_new++] = arrData2[index2++];
                 continue;
             }
+            arrValueNew[index_new] = arrValue1[index2];
             arrKeyNew[index_new] = arrKey1[index1];
             arrDataNew[index_new++] = arrData1[index1++];
         }
-        AVLTree<T, Key>::sortedArrayToBST(arrDataNew, arrKeyNew, s1 + s2, merge_tree);
+        AVLTree<T, Key>::sortedArrayToBST(arrDataNew, arrKeyNew, arrValueNew, s1 + s2, merge_tree);
         delete[] arrData1;
         delete[] arrData2;
         delete[] arrDataNew;
         delete[] arrKey1;
         delete[] arrKey2;
         delete[] arrKeyNew;
+        delete[] arrValue1;
+        delete[] arrValue2;
+        delete[] arrValueNew;
     }
 
-    void inOrderToArrays(T *arrData, Key *arrKey, int size)
+    void inOrderToArrays(T *arrData, Key *arrKey, int* arrValue, int size)
     {
         int i = 0;
-        inOrderToArraysAux(this->root, arrData, arrKey, size, &i);
+        inOrderToArraysAux(this->root, arrData, arrKey, arrValue, size, &i);
     }
 
     template <typename Func>

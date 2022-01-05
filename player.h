@@ -10,7 +10,7 @@ class Player
 
     public:
 
-    Player(int player_id, int level, int score, int group_id): player_id(player_id), level(level), score(score), group_id(group_id){};
+    Player(int player_id = 0, int score = 0, int group_id = 0, int level = 0): player_id(player_id), score(score), group_id(group_id), level(level){};
     Player(const Player &other) = default;
     ~Player() = default;
 
@@ -26,8 +26,14 @@ class Player
     {
         return score;
     }
+    int getGroupId(){
+        return group_id;
+    }
     void setLevel(int new_level){
         this->level = new_level;
+    }
+    void addToLevel(int add){
+        this->level += add;
     }
     void setScore(int new_score){
         this->score = new_score;

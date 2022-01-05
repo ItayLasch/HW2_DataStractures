@@ -1,6 +1,8 @@
 #ifndef HASH_TABLE_H
 #define HASH_TABLE_H
 
+#include "Exceptions.h"
+
 template <class T>
 class HashTable;
 
@@ -26,7 +28,8 @@ class HashTable
     int size;
     NodeList<T> **array;
     int numberOfElements;
-
+    const int Init_size = 100;
+    
     void Resize()
     {
         if (numberOfElements == size / 4 || numberOfElements == size)
@@ -86,10 +89,10 @@ class HashTable
     }
 
 public:
-    HashTable(int size = 100)
+    HashTable()
     {
-        this->size = size;
-        this->array = new NodeList<T> *[size];
+        this->size = Init_size;
+        this->array = new NodeList<T> *[Init_size];
         for (int i = 0; i < size;i++)
         {
             array[i] = nullptr;
@@ -114,7 +117,7 @@ public:
         }
     }
 
-    HashTable &operator=(HashTable &other)
+    HashTable &operator=(const HashTable &other)
     {
 
         if (this == &other)
@@ -157,7 +160,7 @@ public:
         return false;
     }
 
-    void Insert(const T &newData, int key)
+    void Insert(const T newData, int key)
     {
         if(Search(key))
         {
@@ -218,6 +221,27 @@ public:
 
         this->numberOfElements--;
         this->Resize();
+    }
+
+    T& getData(int key)
+    {
+        int location = key % size;
+        if (array[location] == nullptr)
+        {
+            throw NotExist();
+        }
+
+        NodeList<T> *temp = array[location];
+        while (temp != nullptr)
+        {
+            if (temp->key == key)
+            {
+                return temp->data;
+            }
+            temp = temp->next;
+        }
+
+        throw NotExist();
     }
 };
 

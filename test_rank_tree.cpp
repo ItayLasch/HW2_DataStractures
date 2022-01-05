@@ -3,6 +3,7 @@
 #include "AVLTree.h"
 #include "UnionFind.h"
 #include "HashTable.h"
+#include "GameControl.h"
 using namespace std;
 int main()
 {

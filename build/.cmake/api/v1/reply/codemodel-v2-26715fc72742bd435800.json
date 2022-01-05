@@ -37,9 +37,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Test1::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Test1-Debug-10ecdfdddf71af718484.json",
-					"name" : "Test1",
+					"id" : "GameControlProgram::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GameControlProgram-Debug-e0940277233f541698b0.json",
+					"name" : "GameControlProgram",
 					"projectIndex" : 0
 				}
 			]

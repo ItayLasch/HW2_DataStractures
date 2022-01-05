@@ -158,4 +158,9 @@ CMakeFiles/Test1.dir/test_rank_tree.cpp.obj: \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/backward/auto_ptr.h \
  C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/Exceptions.h \
  C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/UnionFind.h \
- C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HashTable.h
+ C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HashTable.h \
+ C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/GameControl.h \
+ C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/Group.h \
+ C:/Users/itayl/OneDrive\ -\ Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/Player.h \
+ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/limits \
+ C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/cstddef

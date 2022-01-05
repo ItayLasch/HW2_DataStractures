@@ -69,32 +69,64 @@ include CMakeFiles/Test1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Test1.dir/flags.make
 
-CMakeFiles/Test1.dir/test_rank_tree.cpp.obj: CMakeFiles/Test1.dir/flags.make
-CMakeFiles/Test1.dir/test_rank_tree.cpp.obj: ../test_rank_tree.cpp
-CMakeFiles/Test1.dir/test_rank_tree.cpp.obj: CMakeFiles/Test1.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Test1.dir/test_rank_tree.cpp.obj"
-	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test1.dir/test_rank_tree.cpp.obj -MF CMakeFiles/Test1.dir/test_rank_tree.cpp.obj.d -o CMakeFiles/Test1.dir/test_rank_tree.cpp.obj -c "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/test_rank_tree.cpp"
+CMakeFiles/Test1.dir/main2.cpp.obj: CMakeFiles/Test1.dir/flags.make
+CMakeFiles/Test1.dir/main2.cpp.obj: ../main2.cpp
+CMakeFiles/Test1.dir/main2.cpp.obj: CMakeFiles/Test1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Test1.dir/main2.cpp.obj"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test1.dir/main2.cpp.obj -MF CMakeFiles/Test1.dir/main2.cpp.obj.d -o CMakeFiles/Test1.dir/main2.cpp.obj -c "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/main2.cpp"
 
-CMakeFiles/Test1.dir/test_rank_tree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test1.dir/test_rank_tree.cpp.i"
-	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/test_rank_tree.cpp" > CMakeFiles/Test1.dir/test_rank_tree.cpp.i
+CMakeFiles/Test1.dir/main2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test1.dir/main2.cpp.i"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/main2.cpp" > CMakeFiles/Test1.dir/main2.cpp.i
 
-CMakeFiles/Test1.dir/test_rank_tree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test1.dir/test_rank_tree.cpp.s"
-	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/test_rank_tree.cpp" -o CMakeFiles/Test1.dir/test_rank_tree.cpp.s
+CMakeFiles/Test1.dir/main2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test1.dir/main2.cpp.s"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/main2.cpp" -o CMakeFiles/Test1.dir/main2.cpp.s
+
+CMakeFiles/Test1.dir/library2.cpp.obj: CMakeFiles/Test1.dir/flags.make
+CMakeFiles/Test1.dir/library2.cpp.obj: ../library2.cpp
+CMakeFiles/Test1.dir/library2.cpp.obj: CMakeFiles/Test1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Test1.dir/library2.cpp.obj"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test1.dir/library2.cpp.obj -MF CMakeFiles/Test1.dir/library2.cpp.obj.d -o CMakeFiles/Test1.dir/library2.cpp.obj -c "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/library2.cpp"
+
+CMakeFiles/Test1.dir/library2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test1.dir/library2.cpp.i"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/library2.cpp" > CMakeFiles/Test1.dir/library2.cpp.i
+
+CMakeFiles/Test1.dir/library2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test1.dir/library2.cpp.s"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/library2.cpp" -o CMakeFiles/Test1.dir/library2.cpp.s
+
+CMakeFiles/Test1.dir/GameControl.cpp.obj: CMakeFiles/Test1.dir/flags.make
+CMakeFiles/Test1.dir/GameControl.cpp.obj: ../GameControl.cpp
+CMakeFiles/Test1.dir/GameControl.cpp.obj: CMakeFiles/Test1.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Test1.dir/GameControl.cpp.obj"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Test1.dir/GameControl.cpp.obj -MF CMakeFiles/Test1.dir/GameControl.cpp.obj.d -o CMakeFiles/Test1.dir/GameControl.cpp.obj -c "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/GameControl.cpp"
+
+CMakeFiles/Test1.dir/GameControl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test1.dir/GameControl.cpp.i"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/GameControl.cpp" > CMakeFiles/Test1.dir/GameControl.cpp.i
+
+CMakeFiles/Test1.dir/GameControl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test1.dir/GameControl.cpp.s"
+	C:/TDM-GCC-64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/GameControl.cpp" -o CMakeFiles/Test1.dir/GameControl.cpp.s
 
 # Object files for target Test1
 Test1_OBJECTS = \
-"CMakeFiles/Test1.dir/test_rank_tree.cpp.obj"
+"CMakeFiles/Test1.dir/main2.cpp.obj" \
+"CMakeFiles/Test1.dir/library2.cpp.obj" \
+"CMakeFiles/Test1.dir/GameControl.cpp.obj"
 
 # External object files for target Test1
 Test1_EXTERNAL_OBJECTS =
 
-Test1.exe: CMakeFiles/Test1.dir/test_rank_tree.cpp.obj
+Test1.exe: CMakeFiles/Test1.dir/main2.cpp.obj
+Test1.exe: CMakeFiles/Test1.dir/library2.cpp.obj
+Test1.exe: CMakeFiles/Test1.dir/GameControl.cpp.obj
 Test1.exe: CMakeFiles/Test1.dir/build.make
 Test1.exe: CMakeFiles/Test1.dir/linklibs.rsp
 Test1.exe: CMakeFiles/Test1.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Test1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Test1.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/Test1.dir/objects.a
 	C:/TDM-GCC-64/bin/ar.exe cr CMakeFiles/Test1.dir/objects.a @CMakeFiles/Test1.dir/objects1.rsp
 	C:/TDM-GCC-64/bin/g++.exe -g -Wl,--whole-archive CMakeFiles/Test1.dir/objects.a -Wl,--no-whole-archive -o Test1.exe -Wl,--out-implib,libTest1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/Test1.dir/linklibs.rsp

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semeste
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Test1.dir/all
+all: CMakeFiles/GameControlProgram.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Test1.dir/clean
+clean: CMakeFiles/GameControlProgram.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Test1.dir
+# Target rules for target CMakeFiles/GameControlProgram.dir
 
 # All Build rule for target.
-CMakeFiles/Test1.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=1,2 "Built target Test1"
-.PHONY : CMakeFiles/Test1.dir/all
+CMakeFiles/GameControlProgram.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" --progress-num=1,2,3,4 "Built target GameControlProgram"
+.PHONY : CMakeFiles/GameControlProgram.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Test1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Test1.dir/all
+CMakeFiles/GameControlProgram.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GameControlProgram.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles" 0
-.PHONY : CMakeFiles/Test1.dir/rule
+.PHONY : CMakeFiles/GameControlProgram.dir/rule
 
 # Convenience name for target.
-Test1: CMakeFiles/Test1.dir/rule
-.PHONY : Test1
+GameControlProgram: CMakeFiles/GameControlProgram.dir/rule
+.PHONY : GameControlProgram
 
 # clean rule for target.
-CMakeFiles/Test1.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/clean
-.PHONY : CMakeFiles/Test1.dir/clean
+CMakeFiles/GameControlProgram.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameControlProgram.dir/build.make CMakeFiles/GameControlProgram.dir/clean
+.PHONY : CMakeFiles/GameControlProgram.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
