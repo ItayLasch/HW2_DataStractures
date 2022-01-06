@@ -9,14 +9,14 @@ class Player
     int group_id;
 
     public:
+        Player() : player_id(0), score(0), group_id(0), level(0){};
+        Player(int player_id, int score, int group_id, int level = 0) : player_id(player_id), score(score), group_id(group_id), level(level){};
+        Player(const Player &other) = default;
+        ~Player() = default;
 
-    Player(int player_id = 0, int score = 0, int group_id = 0, int level = 0): player_id(player_id), score(score), group_id(group_id), level(level){};
-    Player(const Player &other) = default;
-    ~Player() = default;
-
-    int getPlayerId()
-    {
-        return player_id;
+        int getPlayerId()
+        {
+            return player_id;
     }
     int getLevel()
     {
