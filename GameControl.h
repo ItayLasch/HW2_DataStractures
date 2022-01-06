@@ -23,6 +23,8 @@ public:
     ~GameControl();
 
     GameControl(const GameControl &other);
+
+    GameControl& operator=(const GameControl& other);
     
     void mergeGroups(int GroupID1,int GroupID2);
 

@@ -2,13 +2,19 @@
 
     GameControl::GameControl(int K,int scale)
     {
+        cout<< "GC constractor" << endl;
         Players = HashTable<std::shared_ptr<Player>>();
+        
         GroupsParent = UnionFind(K);
         Groups = new Group *[K + 1];
+        cout<< "GC groups-Arr zeros" << endl;
         for (int i = 0; i <=K;i++)
         {
+            cout<< "group number " << i << endl;
             *Groups[i] = Group(i, scale);
         }
+        cout<< "GC groups-Arr for success" << endl;
+        
         this->K = K;
         this->scale = scale;
     }
@@ -33,6 +39,24 @@
         }
         this->K = K;
         this->scale = scale;
+    }
+
+    GameControl& GameControl::operator=(const GameControl& other)
+    {
+        cout << "GC operator=" << endl;
+        if(this == &other){
+            return *this;
+        }
+        this->Players = other.Players;
+        this->GroupsParent = other.GroupsParent;
+        this->Groups = new Group *[other.K + 1];
+        for (int i = 0; i <= other.K;i++)
+        {
+            *this->Groups[i] = Group(*other.Groups[i]);
+        }
+        this->K = K;
+        this->scale = scale;
+        return *this;
     }
 
     void GameControl::mergeGroups(int GroupID1,int GroupID2) 

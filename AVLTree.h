@@ -432,13 +432,15 @@ class AVLTree
 
     void updateHeights(Node<T, Key> *curr)
     {
-        if (curr == nullptr)
-        {
+        if (curr == nullptr){
             return;
         }
         updateHeights(curr->left);
         updateHeights(curr->right);
         curr->height = std::max(curr->getHeight(curr->left), curr->getHeight(curr->right)) + 1;
+        curr->sub_tree_size = curr->getSubTreeSize(curr->left) + curr->getSubTreeSize(curr->right) + 1;
+        curr->sum_elemets_sub_tree = curr->getSumElementsSubTree(curr->left) + curr->getSumElementsSubTree(curr->right) + curr->value;
+        
     }
 
     template <typename Func>

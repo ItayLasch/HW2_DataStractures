@@ -10,17 +10,17 @@
 				{
 					"includeDirectories" : 
 					[
-						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++",
-						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32",
-						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/backward",
-						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/x86_64-w64-mingw32",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include/c++/backward",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include",
 						"C:/TDM-GCC-64/include",
-						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include-fixed",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/include-fixed",
 						"C:/TDM-GCC-64/x86_64-w64-mingw32/include"
 					],
 					"linkDirectories" : 
 					[
-						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0",
 						"C:/TDM-GCC-64/lib/gcc",
 						"C:/TDM-GCC-64/x86_64-w64-mingw32/lib",
 						"C:/TDM-GCC-64/lib"
@@ -28,11 +28,15 @@
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : 
 					[
-						"stdc++",
+						"C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/10.3.0/libstdc++.a",
 						"mingw32",
 						"gcc",
+						"pthread",
+						"gcc",
+						"kernel32",
 						"moldname",
 						"mingwex",
+						"kernel32",
 						"pthread",
 						"advapi32",
 						"shell32",
@@ -40,12 +44,16 @@
 						"kernel32",
 						"mingw32",
 						"gcc",
+						"pthread",
+						"gcc",
+						"kernel32",
 						"moldname",
-						"mingwex"
+						"mingwex",
+						"kernel32"
 					]
 				},
-				"path" : "C:/TDM-GCC-64/bin/g++.exe",
-				"version" : "9.2.0"
+				"path" : "C:/TDM-GCC-64/bin/x86_64-w64-mingw32-g++.exe",
+				"version" : "10.3.0"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 
@@ -59,7 +67,9 @@
 				"m",
 				"mm",
 				"mpp",
-				"CPP"
+				"CPP",
+				"ixx",
+				"cppm"
 			]
 		},
 		{

@@ -48,7 +48,7 @@ class UnionFind
         delete [] this->size_arr;
     }
 
-    UnionFind operator=(const UnionFind& other){
+    UnionFind& operator=(const UnionFind& other){
         if(this == &other){
             return *this;
         }

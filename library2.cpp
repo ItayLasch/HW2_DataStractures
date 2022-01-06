@@ -15,6 +15,7 @@ void *Init(int k, int scale)
     }
     catch(...)
     {
+        cout << "DS = NULL" << std::endl;
         return NULL;
     }
     

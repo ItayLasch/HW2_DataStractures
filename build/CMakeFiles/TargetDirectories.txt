@@ -1,3 +1,3 @@
-C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles/GameControlProgram.dir
-C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles/edit_cache.dir
-C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/build/CMakeFiles/rebuild_cache.dir
+C:/technion/data_structure/hw2_wet/HW2_DataStractures/build/CMakeFiles/GameControlProgram.dir
+C:/technion/data_structure/hw2_wet/HW2_DataStractures/build/CMakeFiles/edit_cache.dir
+C:/technion/data_structure/hw2_wet/HW2_DataStractures/build/CMakeFiles/rebuild_cache.dir

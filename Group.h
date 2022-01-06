@@ -13,7 +13,7 @@ class Group
     int scale;
 
 public:
-    Group(int group_id, int scale)
+    Group(int group_id = 0, int scale = 200)
     {
         this->group_id = group_id;
         this->scale = scale;
@@ -47,6 +47,31 @@ public:
         }
 
         this->playersTree = other.playersTree;
+    }
+
+    Group& operator=(const Group &other)
+    {
+        if(this == &other){
+            return *this;
+        }
+        
+        cout<< "Group operator = start" << endl;
+        this->group_id = other.group_id;
+        this->scale = other.scale;
+        players_in_level_0 = new int[scale + 1];
+        players_per_score = new AVLTree<std::shared_ptr<Player>, Player>[scale + 1];
+        for (int i = 0; i <= scale; i++)
+        {
+            
+            players_in_level_0[i] = other.players_in_level_0[i];
+            cout<< "Group operator = inside for" << endl;
+            players_per_score[i] = other.players_per_score[i];
+            
+        }
+        cout<< "Group operator = 6" << endl;
+
+        this->playersTree = other.playersTree;
+        return *this;
     }
 
     static void MergeGroups(Group &g1, Group &g2)
