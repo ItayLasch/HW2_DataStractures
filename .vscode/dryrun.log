@@ -1,6 +1,6 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make.exe: Entering directory `c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures'
-make.exe: Leaving directory `c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures'
+make.exe: Entering directory `c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures'
+make.exe: Leaving directory `c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures'
  
 make.exe: *** No targets specified and no makefile found.  Stop.
  

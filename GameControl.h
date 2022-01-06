@@ -36,12 +36,13 @@ public:
 
     void changePlayerIDScore(int PlayerID, int NewScore);
 
-    int getPercentOfPlayersWithScoreInBounds(int GroupID, int score, int lowerLevel, int higherLevel, double *players);
+    void getPercentOfPlayersWithScoreInBounds(int GroupID, int score, int lowerLevel, int higherLevel, double *players);
 
     void averageHighestPlayerLevelByGroup(int GroupID, int m, double* avgLevel);
 
     void Quit(GameControl* GC);
 
+    void Print();
 };
 
 

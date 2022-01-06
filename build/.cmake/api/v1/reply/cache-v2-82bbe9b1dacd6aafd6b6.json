@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/technion/data_structure/hw2_wet/HW2_DataStractures/build"
+			"value" : "c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -79,7 +79,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "21"
+			"value" : "20"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "0"
 		},
 		{
 			"name" : "CMAKE_COLOR_MAKEFILE",
@@ -155,10 +155,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/TDM-GCC-64/bin/x86_64-w64-mingw32-g++.exe"
 		},
 		{
@@ -515,7 +515,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/technion/data_structure/hw2_wet/HW2_DataStractures"
+			"value" : "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -959,7 +959,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/CMake/share/cmake-3.21"
+			"value" : "C:/Program Files/CMake/share/cmake-3.20"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
@@ -1195,19 +1195,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/technion/data_structure/hw2_wet/HW2_DataStractures/build"
-		},
-		{
-			"name" : "HW1_DataStracture_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
+			"value" : "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/build"
 		},
 		{
 			"name" : "HW1_DataStracture_SOURCE_DIR",
@@ -1219,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/technion/data_structure/hw2_wet/HW2_DataStractures"
+			"value" : "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures"
 		}
 	],
 	"kind" : "cache",

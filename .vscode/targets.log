@@ -6,7 +6,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jan 05 17:42:23 2022
+# Make data base, printed on Thu Jan 06 17:46:14 2022
 
 # Variables
 
@@ -31,7 +31,7 @@ HOMEDRIVE = C:
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # makefile
-CURDIR := c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures
+CURDIR := c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures
 # default
 SHELL := sh.exe
 # environment
@@ -53,7 +53,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-d3290795-e0a3-4ae0-ab3b-b2bd43ed5bcb-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-77c17079-30f4-44aa-98fe-a418df67873a-sock
 # environment
 VSCODE_CWD = C:\Users\itayl\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -79,7 +79,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19360_KZPPUQYTKSXRTOSG
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9100_TYCDKQPBHOTXVLIQ
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -187,7 +187,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 19360
+VSCODE_PID = 9100
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-G2IE3EV
 # variable set hash-table stats:
@@ -205,7 +205,7 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-G2IE3EV
 # \Users\itayl\AppData\Local\GitHubDesktop\bin;C: could not be stat'd.
 # \Program Files (x86)\Bitvise SSH Client;C: could not be stat'd.
 # \Users\itayl\AppData\Local\Programs\Microsoft VS Code\bin;C: could not be stat'd.
-# . (key c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures, mtime 1641393907): 19 files, no impossibilities.
+# . (key c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures, mtime 1641474798): 19 files, no impossibilities.
 # \Windows;C: could not be stat'd.
 # C: could not be stat'd.
 # \Windows\System32\Wbem;C: could not be stat'd.
@@ -287,12 +287,12 @@ GNUmakefile:
 
 # # of strings in strcache: 0 / lookups = 61 / hits = 61
 # # of strcache buffers: 1 (* 8176 B/buffer = 8176 B)
-# strcache used: total = 0 (1374) / max = 0 / min = 8176 / avg = 0
-# strcache free: total = 0 (6802) / max = 0 / min = 8176 / avg = 0
+# strcache used: total = 0 (1375) / max = 0 / min = 8176 / avg = 0
+# strcache free: total = 0 (6801) / max = 0 / min = 8176 / avg = 0
 
 # strcache hash-table stats:
 # Load=57/8192=1%, Rehash=0, Collisions=3/61=5%
-# Finished Make data base on Wed Jan 05 17:42:23 2022
+# Finished Make data base on Thu Jan 06 17:46:14 2022
 
  
 make.exe: *** No rule to make target `all'.  Stop.

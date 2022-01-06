@@ -536,18 +536,21 @@ public:
 
     void removeItem(const Key &key)
     {
-        if (this->root->key == key)
+        if(this->root != nullptr)
         {
-            if (this->root->left == nullptr && this->root->right == nullptr)
+            if (this->root->key == key)
             {
-                delete this->root;
-                this->root = nullptr;
-                size--;
-                return;
+                if (this->root->left == nullptr && this->root->right == nullptr)
+                {
+                    delete this->root;
+                    this->root = nullptr;
+                    size--;
+                    return;
+                }
             }
+            deleteNodeRec(this->root, key);
+            size--;
         }
-        deleteNodeRec(this->root, key);
-        size--;
     }
 
     int getSize()
@@ -676,12 +679,7 @@ public:
     }
 
     int getSumOfBiggestElements(int num_of_elements)
-    {
-        if (num_of_elements > this->size)
-        {
-            return -1;
-        }
-        
+    {   
         int sum = 0;
         this->getSumOfBiggestElementsAux(this->root, num_of_elements, 0, &sum);
         return sum;

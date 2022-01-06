@@ -162,6 +162,7 @@ StatusType GetPercentOfPlayersWithScoreInBounds(void *DS, int GroupID, int score
         return INVALID_INPUT;
     }
     catch(NotExist& e){
+        std::cout << "player not exist" << std::endl;
         return FAILURE;
     }
     catch(...){

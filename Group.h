@@ -24,8 +24,6 @@ public:
             players_in_level_0[i] = 0;
             players_per_score[i] = AVLTree<std::shared_ptr<Player>, Player>();
         }
-
-        this->playersTree = AVLTree<std::shared_ptr<Player>, Player>();
     }
 
     ~Group()
@@ -49,26 +47,32 @@ public:
         this->playersTree = other.playersTree;
     }
 
-    Group& operator=(const Group &other)
+    Group &operator=(const Group &other)
     {
-        if(this == &other){
+        if (this == &other)
+        {
             return *this;
         }
-        
-        cout<< "Group operator = start" << endl;
+
+        if (players_in_level_0 != nullptr)
+        {
+            delete[] players_in_level_0;
+        }
+        if (players_per_score != nullptr)
+        {
+            delete[] players_per_score;
+        }
+
         this->group_id = other.group_id;
         this->scale = other.scale;
         players_in_level_0 = new int[scale + 1];
         players_per_score = new AVLTree<std::shared_ptr<Player>, Player>[scale + 1];
         for (int i = 0; i <= scale; i++)
         {
-            
+
             players_in_level_0[i] = other.players_in_level_0[i];
-            cout<< "Group operator = inside for" << endl;
             players_per_score[i] = other.players_per_score[i];
-            
         }
-        cout<< "Group operator = 6" << endl;
 
         this->playersTree = other.playersTree;
         return *this;
@@ -87,14 +91,19 @@ public:
 
             merge_tree_score = AVLTree<std::shared_ptr<Player>, Player>();
             merge_tree_players.AVLTreeMerge(g1.players_per_score[i], g2.players_per_score[i], merge_tree_score);
-            g1.players_per_score[i] = merge_tree_players;
+            g1.players_per_score[i] = merge_tree_score;
         }
-        
+
         g1.playersTree.Inorder([&](std::shared_ptr<Player> p)
                                { p->setGroup(g1.group_id); });
+
+        for (int i = 0; i <= g2.scale;i++)
+        {
+            g2.players_in_level_0[i] = 0;
+        }
     }
 
-    void AddPlayer(std::shared_ptr<Player> newPlayer)
+    void AddPlayer(std::shared_ptr<Player>& newPlayer)
     {
         if (newPlayer->getLevel() == 0)
         {
@@ -113,23 +122,29 @@ public:
         if (player_key.getLevel() == 0)
         {
             this->players_in_level_0[player_key.getScore()]--;
+            return;
         }
 
         this->playersTree.removeItem(player_key);
         this->players_per_score[player_key.getScore()].removeItem(player_key);
     }
-
+    /*
     void IncreasePlayerLevel(std::shared_ptr<Player> player_p, int level_increase)
     {
         if (player_p->getLevel() == 0)
         {
             this->players_in_level_0[player_p->getScore()]--;
         }
-        else{
-            this->playersTree.removeItem(*player_p.get());
+        else
+        {
+            this->RemovePlayer(*player_p.get());
         }
         player_p->addToLevel(level_increase);
         this->AddPlayer(player_p);
+    }*/
+
+    void RemoveFromZeroLevel(int score){
+        this->players_in_level_0[score]--;
     }
 
     void changePlayerScore(std::shared_ptr<Player> player_p, int new_score)
@@ -143,7 +158,7 @@ public:
     int getTotalSumInLevelZero()
     {
         int sum = 0;
-        for (int i = 0; i <= this->scale;i++)
+        for (int i = 0; i <= this->scale; i++)
         {
             sum += players_in_level_0[i];
         }
@@ -156,7 +171,7 @@ public:
         return this->group_id;
     }
 
-    int * getPlayerInLevelZero()
+    int *getPlayerInLevelZero()
     {
         return this->players_in_level_0;
     }
@@ -171,7 +186,25 @@ public:
         return this->playersTree;
     }
 
-    
+    void Print(){
+        std::cout << "group_id: " << group_id << std::endl;
+        std::cout << "size of player tree: " << playersTree.getSize() << std::endl;
+        std::cout << "number of players in level 0: " << this->getTotalSumInLevelZero() <<std::endl;
+        std::cout << "all the players: " << std::endl;
+        this->playersTree.Inorder([&](std::shared_ptr<Player> p)
+                               { p->Print(); });
+        for (int i = 0; i < scale; i++)
+        {
+            std::cout << std::endl;
+            std::cout << "players: in score " << i  << std::endl;
+            this->players_per_score[i].Inorder([&](std::shared_ptr<Player> p)
+                               { p->Print(); });
+        }
+
+        std::cout << std::endl << std::endl  << std::endl << std::endl;
+        
+        
+    }
 };
 
 #endif
