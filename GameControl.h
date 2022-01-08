@@ -8,11 +8,12 @@
 
 #include <limits>
 #include <cstddef>
+#include <cmath>
 
 class GameControl
 {
     HashTable<std::shared_ptr<Player>> Players;
-    UnionFind GroupsParent;
+    UnionFind* GroupsParent;
     Group **Groups;
     int K;
     int scale;

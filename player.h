@@ -4,19 +4,19 @@
 class Player
 {
     int player_id;
-    int level;
     int score;
     int group_id;
+    int level;
 
-    public:
-        Player() : player_id(0), score(0), group_id(0), level(0){};
-        Player(int player_id, int score, int group_id, int level = 0) : player_id(player_id), score(score), group_id(group_id), level(level){};
-        Player(const Player &other) = default;
-        ~Player() = default;
+public:
+    Player() : player_id(0), score(0), group_id(0), level(0){};
+    Player(int player_id, int score, int group_id, int level = 0) : player_id(player_id), score(score), group_id(group_id), level(level){};
+    Player(const Player &other) = default;
+    ~Player() = default;
 
-        int getPlayerId()
-        {
-            return player_id;
+    int getPlayerId()
+    {
+        return player_id;
     }
     int getLevel()
     {
@@ -26,19 +26,24 @@ class Player
     {
         return score;
     }
-    int getGroupId(){
+    int getGroupId()
+    {
         return group_id;
     }
-    void setLevel(int new_level){
+    void setLevel(int new_level)
+    {
         this->level = new_level;
     }
-    void addToLevel(int add){
+    void addToLevel(int add)
+    {
         this->level += add;
     }
-    void setScore(int new_score){
+    void setScore(int new_score)
+    {
         this->score = new_score;
     }
-    void setGroup(int new_group_id){
+    void setGroup(int new_group_id)
+    {
         this->group_id = new_group_id;
     }
 
@@ -66,13 +71,13 @@ class Player
         return true;
     }
 
-    void Print(){
+    void Print()
+    {
         std::cout << "player id: " << player_id << "  ";
         std::cout << "player score: " << score << "  ";
         std::cout << "player level: " << level << "  ";
         std::cout << "Group: " << group_id << std::endl;
     }
-
 };
 
 #endif

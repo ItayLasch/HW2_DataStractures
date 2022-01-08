@@ -2,6 +2,7 @@
 #define HASH_TABLE_H
 
 #include "Exceptions.h"
+#include <iostream>
 
 template <class T>
 class HashTable;
@@ -18,6 +19,17 @@ class NodeList
     ~NodeList() = default;
     NodeList(const NodeList<T> &other) = default;
     NodeList &operator=(const NodeList<T> &other) = default;
+    public:
+    NodeList<T>* GetNext()
+    {
+        return this->next;
+    }
+
+    friend std::ostream &operator<<(std::ostream &os, const NodeList<T> &nd)
+    {
+        os << nd.key;
+        return os;
+    }
 
     friend HashTable<T>;
 };
@@ -28,11 +40,11 @@ class HashTable
     int size;
     NodeList<T> **array;
     int numberOfElements;
-    const int Init_size = 100;
+    const int Init_size = 4;
     
     void Resize()
     {
-        if (numberOfElements == size / 4 || numberOfElements == size)
+        if (numberOfElements <= size / 4 || numberOfElements == size)
         {
             NodeList<T> **temp = new NodeList<T> *[size];
             for(int i = 0 ; i < size; i++)
@@ -40,7 +52,8 @@ class HashTable
                 temp[i] = array[i];
             }
             delete[] array;
-            int newSize = (numberOfElements == size) ? 2 * size : size / 2;
+            int smallerSize = size / 2 < Init_size ? Init_size : size / 2;
+            int newSize = (numberOfElements == size) ? 2 * size : smallerSize;
             array = new NodeList<T> *[newSize];
             for (int i = 0; i < newSize;i++)
             {
@@ -52,17 +65,22 @@ class HashTable
             {
                 if (temp[i] != nullptr)
                 {
-                    int location = (temp[i]->key) % size;
-                    NodeList<T> *newNode = new NodeList<T>(temp[i]->key, temp[i]->data);
-                    if (array[location] == nullptr)
+                    NodeList<T> *tempNode = temp[i];
+                    while(tempNode != nullptr)
                     {
-                        array[location] = newNode;
-                    }
-                    else
-                    {
-                        newNode->next = array[location];
-                        array[location]->prev = newNode;
-                        array[location] = newNode;
+                        int location = (tempNode->key) % size;
+                        NodeList<T> *newNode = new NodeList<T>(tempNode->key, tempNode->data);
+                        if (array[location] == nullptr)
+                        {
+                            array[location] = newNode;
+                        }
+                        else
+                        {
+                            newNode->next = array[location];
+                            array[location]->prev = newNode;
+                            array[location] = newNode;
+                        }
+                        tempNode = tempNode->next;
                     }
                 }
             }
@@ -242,6 +260,22 @@ public:
         }
 
         throw NotExist();
+    }
+
+    friend std::ostream &operator<<(std::ostream &os, const HashTable<T> &ht)
+    {
+        for (int i = 0; i < ht.size; i++)
+        {
+            os << i << ": ";
+            NodeList<T> *temp = ht.array[i];
+            while (temp != nullptr)
+            {
+                os << "-> " << *temp;
+                temp = temp->GetNext();
+            }
+            os << std::endl;
+        }
+        return os;
     }
 };
 

@@ -2,6 +2,7 @@
 #define UNION_FIND
 
 #include <iostream>
+#include "Exceptions.h"
 using namespace std;
 
 class UnionFind
@@ -34,6 +35,7 @@ class UnionFind
     }
 
     UnionFind(const UnionFind& other){
+        this->num_of_elements = other.num_of_elements;
         parents_arr = new int[num_of_elements];
         size_arr = new int[num_of_elements];
         for (int i = 0; i < this->num_of_elements; i++)
@@ -52,8 +54,10 @@ class UnionFind
         if(this == &other){
             return *this;
         }
+        
         delete [] this->parents_arr;
         delete [] this->size_arr;
+        this->num_of_elements = other.num_of_elements;
         this->parents_arr = new int[num_of_elements];
         this->size_arr = new int[num_of_elements];
         for (int i = 0; i < this->num_of_elements; i++)
@@ -63,8 +67,9 @@ class UnionFind
         }
         return *this;
     }
-    
-    int Union(int p, int q){
+
+    int union_groups(int p, int q)
+    {
         if((p < 1 || p > this->num_of_elements) || (q < 1 || q > this->num_of_elements)){
             throw OutOfBounds();
         }
@@ -87,8 +92,8 @@ class UnionFind
         }
     }
 
-    int Find(int p){
-        if(p < 0 || p > this->num_of_elements){
+    int find(int p){
+        if(p < 1 || p > this->num_of_elements){
             throw OutOfBounds();
         }
         int temp = p, count = 0;
@@ -106,6 +111,8 @@ class UnionFind
             p = p_parent;
         }
         return this->parents_arr[temp];
+
+        
     }
     void Print(){
         cout << "       ";

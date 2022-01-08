@@ -22,8 +22,8 @@ class Node
     int sub_tree_size;
     int sum_elemets_sub_tree;
 
-    Node(Key &key, const T &data, int value) : key(key), data(data), left(nullptr), right(nullptr), parent(nullptr), height(0), sub_tree_size(1),
-                                               value(value), sum_elemets_sub_tree(value){};
+    Node(Key &key, const T &data, int value) : key(key), data(data), value(value), left(nullptr), right(nullptr), parent(nullptr),
+                                               height(0), sub_tree_size(1), sum_elemets_sub_tree(value){};
     ~Node() = default;
     Node(const Node<T, Key> &other) = default;
     Node &operator=(const Node &other) = default;
@@ -402,7 +402,7 @@ class AVLTree
         inOrderToArraysAux(curr->right, arrData, arrKey, arrValue, size, index);
     }
 
-    static Node<T, Key> *sortedArrayToBST_helper(T *arrData, Key *arrKey, int *arrValue ,int start, int end, int size_limit) // A - array of *Node
+    static Node<T, Key> *sortedArrayToBST_helper(T *arrData, Key *arrKey, int *arrValue, int start, int end, int size_limit) // A - array of *Node
     {
         if (start > end)
         {
@@ -432,7 +432,8 @@ class AVLTree
 
     void updateHeights(Node<T, Key> *curr)
     {
-        if (curr == nullptr){
+        if (curr == nullptr)
+        {
             return;
         }
         updateHeights(curr->left);
@@ -440,7 +441,6 @@ class AVLTree
         curr->height = std::max(curr->getHeight(curr->left), curr->getHeight(curr->right)) + 1;
         curr->sub_tree_size = curr->getSubTreeSize(curr->left) + curr->getSubTreeSize(curr->right) + 1;
         curr->sum_elemets_sub_tree = curr->getSumElementsSubTree(curr->left) + curr->getSumElementsSubTree(curr->right) + curr->value;
-        
     }
 
     template <typename Func>
@@ -479,16 +479,20 @@ class AVLTree
         getRankAux(curr->right, key, rank);
     }
 
-    void getSumOfBiggestElementsAux(Node<T, Key>* curr, int max, int counter, int* sum){
-        if(curr == nullptr){
+    void getSumOfBiggestElementsAux(Node<T, Key> *curr, int max, int counter, int *sum)
+    {
+        if (curr == nullptr)
+        {
             return;
         }
         int temp = counter + 1 + curr->getSubTreeSize(curr->right);
-        if(temp == max){
+        if (temp == max)
+        {
             *sum += curr->getSumElementsSubTree(curr->right) + curr->value;
             return;
         }
-        if(temp > max){
+        if (temp > max)
+        {
             getSumOfBiggestElementsAux(curr->right, max, counter, sum);
             return;
         }
@@ -523,7 +527,7 @@ public:
         return *this;
     }
 
-    void AddItem(const T &new_data, Key key, int value)
+    void AddItem(const T &new_data, Key &key, int value)
     {
         if (this->root == nullptr)
         {
@@ -536,7 +540,7 @@ public:
 
     void removeItem(const Key &key)
     {
-        if(this->root != nullptr)
+        if (this->root != nullptr)
         {
             if (this->root->key == key)
             {
@@ -648,7 +652,7 @@ public:
         delete[] arrValueNew;
     }
 
-    void inOrderToArrays(T *arrData, Key *arrKey, int* arrValue, int size)
+    void inOrderToArrays(T *arrData, Key *arrKey, int *arrValue, int size)
     {
         int i = 0;
         inOrderToArraysAux(this->root, arrData, arrKey, arrValue, size, &i);
@@ -666,20 +670,20 @@ public:
         }
     }
 
-    int getRank(Key key)
+    int getRank(Key &key)
     {
         if (!this->isExists(key))
         {
-            return -1;
+            return 0;
         }
-        
+
         int rank = 0;
         this->getRankAux(this->root, key, &rank);
         return rank;
     }
 
     int getSumOfBiggestElements(int num_of_elements)
-    {   
+    {
         int sum = 0;
         this->getSumOfBiggestElementsAux(this->root, num_of_elements, 0, &sum);
         return sum;

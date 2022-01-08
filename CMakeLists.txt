@@ -18,6 +18,6 @@ set(CMAKE_CPP_FLAGS ${MTM_FLAGS_DEBUG})
 
 
 # Add the names of your source files here
-set(CPP_FILES main2.cpp library2.cpp GameControl.cpp)
+set(CPP_FILES UniTest.cpp)
 
 add_executable(GameControlProgram ${CPP_FILES})

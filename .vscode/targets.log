@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Thu Jan 06 18:08:50 2022
+# Make data base, printed on Sat Jan 08 16:51:46 2022
 
 # Variables
 
@@ -54,7 +54,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-e6455c15-da9c-4b36-b1a4-3d02dd71076d-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-79a01b04-4efd-4c8d-ac77-b749d4071e28-sock
 # environment
 VSCODE_CWD = C:\Users\itayl\AppData\Local\Programs\Microsoft VS Code
 # environment
@@ -80,7 +80,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_21624_VOFQUGJTZHUMCBTG
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9864_ZGBWIBMHJKJULLUT
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -188,7 +188,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 21624
+VSCODE_PID = 9864
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-G2IE3EV
 # variable set hash-table stats:
@@ -206,7 +206,7 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-G2IE3EV
 # \Users\itayl\AppData\Local\GitHubDesktop\bin;C: could not be stat'd.
 # \Program Files (x86)\Bitvise SSH Client;C: could not be stat'd.
 # \Users\itayl\AppData\Local\Programs\Microsoft VS Code\bin;C: could not be stat'd.
-# . (key c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures, mtime 1641484720): 19 files, no impossibilities.
+# . (key c:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures, mtime 1641629529): 19 files, no impossibilities.
 # \Windows;C: could not be stat'd.
 # C: could not be stat'd.
 # \Windows\System32\Wbem;C: could not be stat'd.
@@ -293,7 +293,7 @@ GNUmakefile:
 
 # strcache hash-table stats:
 # Load=57/8192=1%, Rehash=0, Collisions=3/61=5%
-# Finished Make data base on Thu Jan 06 18:08:50 2022
+# Finished Make data base on Sat Jan 08 16:51:46 2022
 
  
 make.exe: *** No rule to make target `all'.  Stop.

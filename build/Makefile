@@ -128,77 +128,29 @@ GameControlProgram/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/build
 .PHONY : GameControlProgram/fast
 
-GameControl.obj: GameControl.cpp.obj
-.PHONY : GameControl.obj
+UniTest.obj: UniTest.cpp.obj
+.PHONY : UniTest.obj
 
 # target to build an object file
-GameControl.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj
-.PHONY : GameControl.cpp.obj
+UniTest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj
+.PHONY : UniTest.cpp.obj
 
-GameControl.i: GameControl.cpp.i
-.PHONY : GameControl.i
-
-# target to preprocess a source file
-GameControl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/GameControl.cpp.i
-.PHONY : GameControl.cpp.i
-
-GameControl.s: GameControl.cpp.s
-.PHONY : GameControl.s
-
-# target to generate assembly for a file
-GameControl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/GameControl.cpp.s
-.PHONY : GameControl.cpp.s
-
-library2.obj: library2.cpp.obj
-.PHONY : library2.obj
-
-# target to build an object file
-library2.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/library2.cpp.obj
-.PHONY : library2.cpp.obj
-
-library2.i: library2.cpp.i
-.PHONY : library2.i
+UniTest.i: UniTest.cpp.i
+.PHONY : UniTest.i
 
 # target to preprocess a source file
-library2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/library2.cpp.i
-.PHONY : library2.cpp.i
+UniTest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/UniTest.cpp.i
+.PHONY : UniTest.cpp.i
 
-library2.s: library2.cpp.s
-.PHONY : library2.s
-
-# target to generate assembly for a file
-library2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/library2.cpp.s
-.PHONY : library2.cpp.s
-
-main2.obj: main2.cpp.obj
-.PHONY : main2.obj
-
-# target to build an object file
-main2.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/main2.cpp.obj
-.PHONY : main2.cpp.obj
-
-main2.i: main2.cpp.i
-.PHONY : main2.i
-
-# target to preprocess a source file
-main2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/main2.cpp.i
-.PHONY : main2.cpp.i
-
-main2.s: main2.cpp.s
-.PHONY : main2.s
+UniTest.s: UniTest.cpp.s
+.PHONY : UniTest.s
 
 # target to generate assembly for a file
-main2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/main2.cpp.s
-.PHONY : main2.cpp.s
+UniTest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameControlProgram.dir\build.make CMakeFiles/GameControlProgram.dir/UniTest.cpp.s
+.PHONY : UniTest.cpp.s
 
 # Help Target
 help:
@@ -209,15 +161,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... GameControlProgram
-	@echo ... GameControl.obj
-	@echo ... GameControl.i
-	@echo ... GameControl.s
-	@echo ... library2.obj
-	@echo ... library2.i
-	@echo ... library2.s
-	@echo ... main2.obj
-	@echo ... main2.i
-	@echo ... main2.s
+	@echo ... UniTest.obj
+	@echo ... UniTest.i
+	@echo ... UniTest.s
 .PHONY : help
 
 
