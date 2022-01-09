@@ -59,6 +59,7 @@
         "optional": "cpp",
         "random": "cpp",
         "fstream": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "cassert": "cpp"
     }
 }

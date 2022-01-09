@@ -83,24 +83,22 @@ public:
         AVLTree<std::shared_ptr<Player>, Player> merge_tree_players = AVLTree<std::shared_ptr<Player>, Player>();
         merge_tree_players.AVLTreeMerge(g1.playersTree, g2.playersTree, merge_tree_players);
         g1.playersTree = merge_tree_players;
+        g2.playersTree = AVLTree<std::shared_ptr<Player>, Player>();
 
         AVLTree<std::shared_ptr<Player>, Player> merge_tree_score;
         for (int i = 0; i <= g1.scale; i++)
         {
             g1.players_in_level_0[i] += g2.players_in_level_0[i];
-
+            g2.players_in_level_0[i] = 0;
             merge_tree_score = AVLTree<std::shared_ptr<Player>, Player>();
             merge_tree_players.AVLTreeMerge(g1.players_per_score[i], g2.players_per_score[i], merge_tree_score);
             g1.players_per_score[i] = merge_tree_score;
+            g2.players_per_score[i] = AVLTree<std::shared_ptr<Player>, Player>();
         }
 
         g1.playersTree.Inorder([&](std::shared_ptr<Player> p)
                                { p->setGroup(g1.group_id); });
 
-        for (int i = 0; i <= g2.scale; i++)
-        {
-            g2.players_in_level_0[i] = 0;
-        }
     }
 
     void AddPlayer(std::shared_ptr<Player> &newPlayer)
@@ -111,7 +109,7 @@ public:
         }
         else
         {
-            Player player_key = Player(*(newPlayer.get()));
+            Player player_key = Player(*newPlayer);
             playersTree.AddItem(newPlayer, player_key, player_key.getLevel());
             players_per_score[newPlayer->getScore()].AddItem(newPlayer, player_key, player_key.getLevel());
         }
@@ -128,38 +126,11 @@ public:
         this->playersTree.removeItem(player_key);
         this->players_per_score[player_key.getScore()].removeItem(player_key);
     }
-    
-    /*
-    void IncreasePlayerLevel(std::shared_ptr<Player> player_p, int level_increase)
-    {
-        if (player_p->getLevel() == 0)
-        {
-            this->players_in_level_0[player_p->getScore()]--;
-        }
-        else
-        {
-            this->RemovePlayer(*player_p.get());
-        }
-        player_p->addToLevel(level_increase);
-        this->AddPlayer(player_p);
-    }*/
 
-    void RemoveFromZeroLevel(int score)
-    {
-        this->players_in_level_0[score]--;
-    }
 
-    /*void changePlayerScore(std::shared_ptr<Player> player_p, int new_score)
+    double getTotalSumInLevelZero()
     {
-        int old_score = player_p->getScore();
-        this->players_per_score[old_score].removeItem(*(player_p.get()));
-        player_p->setScore(new_score);
-        this->players_per_score[new_score].AddItem(player_p, *(player_p.get()), player_p->getLevel());
-    }*/
-
-    int getTotalSumInLevelZero()
-    {
-        int sum = 0;
+        double sum = 0;
         for (int i = 0; i <= this->scale; i++)
         {
             sum += players_in_level_0[i];

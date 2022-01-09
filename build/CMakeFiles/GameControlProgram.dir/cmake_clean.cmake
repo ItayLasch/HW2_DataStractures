@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj"
-  "CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj.d"
+  "CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj"
+  "CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj.d"
+  "CMakeFiles/GameControlProgram.dir/library2.cpp.obj"
+  "CMakeFiles/GameControlProgram.dir/library2.cpp.obj.d"
+  "CMakeFiles/GameControlProgram.dir/main2.cpp.obj"
+  "CMakeFiles/GameControlProgram.dir/main2.cpp.obj.d"
   "GameControlProgram.exe"
   "GameControlProgram.exe.manifest"
   "GameControlProgram.pdb"

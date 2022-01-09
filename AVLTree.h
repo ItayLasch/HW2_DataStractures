@@ -363,6 +363,7 @@ class AVLTree
                     // copy content of child to current node
                     curr->key = child->key;
                     curr->data = child->data;
+                    curr->value = child->value;
                     curr->left = nullptr;
                     curr->right = nullptr;
                 }
@@ -374,6 +375,7 @@ class AVLTree
                 Node<T, Key> *node_replace = getpredecessor(curr->left);
                 curr->key = node_replace->key;
                 curr->data = node_replace->data;
+                curr->value = node_replace->value;
                 curr->left = deleteNodeRec(curr->left, node_replace->key);
             }
         }
@@ -497,6 +499,7 @@ class AVLTree
             return;
         }
         *sum += curr->getSumElementsSubTree(curr->right) + curr->value;
+        
         getSumOfBiggestElementsAux(curr->left, max, temp, sum);
     }
 
@@ -636,7 +639,7 @@ public:
                 arrDataNew[index_new++] = arrData2[index2++];
                 continue;
             }
-            arrValueNew[index_new] = arrValue1[index2];
+            arrValueNew[index_new] = arrValue1[index1];
             arrKeyNew[index_new] = arrKey1[index1];
             arrDataNew[index_new++] = arrData1[index1++];
         }
@@ -684,6 +687,12 @@ public:
 
     int getSumOfBiggestElements(int num_of_elements)
     {
+        if(num_of_elements == 0){
+            return 0;
+        }
+        if(num_of_elements >= this->root->sub_tree_size){
+            return this->root->sum_elemets_sub_tree;
+        }
         int sum = 0;
         this->getSumOfBiggestElementsAux(this->root, num_of_elements, 0, &sum);
         return sum;

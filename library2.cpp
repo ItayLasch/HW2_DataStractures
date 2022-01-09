@@ -151,6 +151,10 @@ StatusType GetPercentOfPlayersWithScoreInBounds(void *DS, int GroupID, int score
     {
         return INVALID_INPUT;
     }
+    if(lowerLevel > higherLevel)
+    {
+        return FAILURE;
+    }
     try{
         ((GameControl *)DS)->getPercentOfPlayersWithScoreInBounds(GroupID, score, lowerLevel, higherLevel, players);
     }

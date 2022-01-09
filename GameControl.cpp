@@ -126,14 +126,14 @@ void GameControl::increasePlayerIDLevel(int PlayerID, int levelIncrease)
         throw NotExist();
     }
     std::shared_ptr<Player> player_p = Players.getData(PlayerID);
-    int group_id = player_p->getGroupId();
+    int group_id = GroupsParent->Find(player_p->getGroupId());
 
-    Groups[0]->RemovePlayer(*player_p.get());
-    Groups[group_id]->RemovePlayer(*player_p.get());
-    
+    Groups[0]->RemovePlayer(*player_p);
+    Groups[group_id]->RemovePlayer(*player_p);
     player_p->addToLevel(levelIncrease);
     Groups[0]->AddPlayer(player_p);
     Groups[group_id]->AddPlayer(player_p);
+    player_p->setGroup(group_id);
 }
 
 void GameControl::changePlayerIDScore(int PlayerID, int NewScore)
@@ -148,27 +148,28 @@ void GameControl::changePlayerIDScore(int PlayerID, int NewScore)
     }
 
     std::shared_ptr<Player> player_p = Players.getData(PlayerID);
+    int group_id = GroupsParent->Find(player_p->getGroupId());
     if(player_p->getLevel() != 0)
     {
-        Groups[player_p->getGroupId()]->getPlayersTreeByScore(player_p->getScore()).removeItem(*player_p.get());
-        Groups[0]->getPlayersTreeByScore(player_p->getScore()).removeItem(*player_p.get());
+        Groups[group_id]->getPlayersTreeByScore(player_p->getScore()).removeItem(*player_p);
+        Groups[0]->getPlayersTreeByScore(player_p->getScore()).removeItem(*player_p);
         player_p->setScore(NewScore);
-        Groups[player_p->getGroupId()]->getPlayersTreeByScore(player_p->getScore()).AddItem(player_p, *player_p.get(), player_p->getLevel());
-        Groups[0]->getPlayersTreeByScore(player_p->getScore()).AddItem(player_p, *player_p.get(), player_p->getLevel());
+        Groups[group_id]->getPlayersTreeByScore(player_p->getScore()).AddItem(player_p, *player_p, player_p->getLevel());
+        Groups[0]->getPlayersTreeByScore(player_p->getScore()).AddItem(player_p, *player_p, player_p->getLevel());
     }
     else
     {
-        Groups[player_p->getGroupId()]->getPlayerInLevelZero()[player_p->getScore()]--;
+        Groups[group_id]->getPlayerInLevelZero()[player_p->getScore()]--;
         Groups[0]->getPlayerInLevelZero()[player_p->getScore()]--;
         player_p->setScore(NewScore);
-        Groups[player_p->getGroupId()]->getPlayerInLevelZero()[player_p->getScore()]++;
+        Groups[group_id]->getPlayerInLevelZero()[player_p->getScore()]++;
         Groups[0]->getPlayerInLevelZero()[player_p->getScore()]++;
     }
 }
 
 void GameControl::getPercentOfPlayersWithScoreInBounds(int GroupID, int score, int lowerLevel, int higherLevel, double *players)
 {
-    if (GroupID < 0 || GroupID > K)
+    if (GroupID < 0 || GroupID > K || score > scale) 
     {
         throw InvalidInput();
     }
@@ -176,7 +177,7 @@ void GameControl::getPercentOfPlayersWithScoreInBounds(int GroupID, int score, i
     Group *group = Groups[GroupMain];
     if(lowerLevel <= 0 && higherLevel == 0)
     {
-        *players = (group->getPlayerInLevelZero()[score] / group->getTotalSumInLevelZero()) * 100;
+        *players = ((double)group->getPlayerInLevelZero()[score] / group->getTotalSumInLevelZero()) * 100;
         return;
     }
 
@@ -230,7 +231,12 @@ void GameControl::averageHighestPlayerLevelByGroup(int GroupID, int m, double *a
     {
         throw OutOfBounds();
     }
-    int m_new = m > tree_size ? tree_size : m;
+    double m_new = m > tree_size ? tree_size : m;
+    if(m_new == 0)
+    {
+        *avgLevel = 0;
+        return;
+    }
     double sum = group->getPlayersTree().getSumOfBiggestElements(m_new);
     *avgLevel = sum / m;
 }

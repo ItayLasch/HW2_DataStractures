@@ -1,6 +1,6 @@
 CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj: \
  C:\Users\itayl\OneDrive\ -\ Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\UniTest.cpp \
- C:\Users\itayl\OneDrive\ -\ Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\UnionFind.h \
+ C:\Users\itayl\OneDrive\ -\ Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\unionfind.h \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/iostream \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  C:/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \

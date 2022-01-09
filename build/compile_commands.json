@@ -1,7 +1,17 @@
 [
 {
   "directory": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/build",
-  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\GameControlProgram.dir\\UniTest.cpp.obj -c \"C:\\Users\\itayl\\OneDrive - Technion\\Desktop\\Semesters\\semester_c\\Mivni\\Assignments\\HW2_WET\\HW2_DataStractures\\HW2_DataStractures\\UniTest.cpp\"",
-  "file": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/UniTest.cpp"
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\GameControlProgram.dir\\GameControl.cpp.obj -c \"C:\\Users\\itayl\\OneDrive - Technion\\Desktop\\Semesters\\semester_c\\Mivni\\Assignments\\HW2_WET\\HW2_DataStractures\\HW2_DataStractures\\GameControl.cpp\"",
+  "file": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/GameControl.cpp"
+},
+{
+  "directory": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\GameControlProgram.dir\\library2.cpp.obj -c \"C:\\Users\\itayl\\OneDrive - Technion\\Desktop\\Semesters\\semester_c\\Mivni\\Assignments\\HW2_WET\\HW2_DataStractures\\HW2_DataStractures\\library2.cpp\"",
+  "file": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/library2.cpp"
+},
+{
+  "directory": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++11 -o CMakeFiles\\GameControlProgram.dir\\main2.cpp.obj -c \"C:\\Users\\itayl\\OneDrive - Technion\\Desktop\\Semesters\\semester_c\\Mivni\\Assignments\\HW2_WET\\HW2_DataStractures\\HW2_DataStractures\\main2.cpp\"",
+  "file": "C:/Users/itayl/OneDrive - Technion/Desktop/Semesters/semester_c/Mivni/Assignments/HW2_WET/HW2_DataStractures/HW2_DataStractures/main2.cpp"
 }
 ]

@@ -68,33 +68,65 @@ include CMakeFiles/GameControlProgram.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GameControlProgram.dir/flags.make
 
-CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj: CMakeFiles/GameControlProgram.dir/flags.make
-CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj: ../UniTest.cpp
-CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj: CMakeFiles/GameControlProgram.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj -MF CMakeFiles\GameControlProgram.dir\UniTest.cpp.obj.d -o CMakeFiles\GameControlProgram.dir\UniTest.cpp.obj -c "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\UniTest.cpp"
+CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj: CMakeFiles/GameControlProgram.dir/flags.make
+CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj: ../GameControl.cpp
+CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj: CMakeFiles/GameControlProgram.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj -MF CMakeFiles\GameControlProgram.dir\GameControl.cpp.obj.d -o CMakeFiles\GameControlProgram.dir\GameControl.cpp.obj -c "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\GameControl.cpp"
 
-CMakeFiles/GameControlProgram.dir/UniTest.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameControlProgram.dir/UniTest.cpp.i"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\UniTest.cpp" > CMakeFiles\GameControlProgram.dir\UniTest.cpp.i
+CMakeFiles/GameControlProgram.dir/GameControl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameControlProgram.dir/GameControl.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\GameControl.cpp" > CMakeFiles\GameControlProgram.dir\GameControl.cpp.i
 
-CMakeFiles/GameControlProgram.dir/UniTest.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameControlProgram.dir/UniTest.cpp.s"
-	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\UniTest.cpp" -o CMakeFiles\GameControlProgram.dir\UniTest.cpp.s
+CMakeFiles/GameControlProgram.dir/GameControl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameControlProgram.dir/GameControl.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\GameControl.cpp" -o CMakeFiles\GameControlProgram.dir\GameControl.cpp.s
+
+CMakeFiles/GameControlProgram.dir/library2.cpp.obj: CMakeFiles/GameControlProgram.dir/flags.make
+CMakeFiles/GameControlProgram.dir/library2.cpp.obj: ../library2.cpp
+CMakeFiles/GameControlProgram.dir/library2.cpp.obj: CMakeFiles/GameControlProgram.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameControlProgram.dir/library2.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameControlProgram.dir/library2.cpp.obj -MF CMakeFiles\GameControlProgram.dir\library2.cpp.obj.d -o CMakeFiles\GameControlProgram.dir\library2.cpp.obj -c "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\library2.cpp"
+
+CMakeFiles/GameControlProgram.dir/library2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameControlProgram.dir/library2.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\library2.cpp" > CMakeFiles\GameControlProgram.dir\library2.cpp.i
+
+CMakeFiles/GameControlProgram.dir/library2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameControlProgram.dir/library2.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\library2.cpp" -o CMakeFiles\GameControlProgram.dir\library2.cpp.s
+
+CMakeFiles/GameControlProgram.dir/main2.cpp.obj: CMakeFiles/GameControlProgram.dir/flags.make
+CMakeFiles/GameControlProgram.dir/main2.cpp.obj: ../main2.cpp
+CMakeFiles/GameControlProgram.dir/main2.cpp.obj: CMakeFiles/GameControlProgram.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameControlProgram.dir/main2.cpp.obj"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameControlProgram.dir/main2.cpp.obj -MF CMakeFiles\GameControlProgram.dir\main2.cpp.obj.d -o CMakeFiles\GameControlProgram.dir\main2.cpp.obj -c "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\main2.cpp"
+
+CMakeFiles/GameControlProgram.dir/main2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameControlProgram.dir/main2.cpp.i"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\main2.cpp" > CMakeFiles\GameControlProgram.dir\main2.cpp.i
+
+CMakeFiles/GameControlProgram.dir/main2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameControlProgram.dir/main2.cpp.s"
+	C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\main2.cpp" -o CMakeFiles\GameControlProgram.dir\main2.cpp.s
 
 # Object files for target GameControlProgram
 GameControlProgram_OBJECTS = \
-"CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj"
+"CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj" \
+"CMakeFiles/GameControlProgram.dir/library2.cpp.obj" \
+"CMakeFiles/GameControlProgram.dir/main2.cpp.obj"
 
 # External object files for target GameControlProgram
 GameControlProgram_EXTERNAL_OBJECTS =
 
-GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/UniTest.cpp.obj
+GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/GameControl.cpp.obj
+GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/library2.cpp.obj
+GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/main2.cpp.obj
 GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/build.make
 GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/linklibs.rsp
 GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/objects1.rsp
 GameControlProgram.exe: CMakeFiles/GameControlProgram.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable GameControlProgram.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\itayl\OneDrive - Technion\Desktop\Semesters\semester_c\Mivni\Assignments\HW2_WET\HW2_DataStractures\HW2_DataStractures\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable GameControlProgram.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\GameControlProgram.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
