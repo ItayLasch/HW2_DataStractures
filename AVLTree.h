@@ -499,7 +499,7 @@ class AVLTree
             return;
         }
         *sum += curr->getSumElementsSubTree(curr->right) + curr->value;
-        
+
         getSumOfBiggestElementsAux(curr->left, max, temp, sum);
     }
 
@@ -687,10 +687,12 @@ public:
 
     int getSumOfBiggestElements(int num_of_elements)
     {
-        if(num_of_elements == 0){
+        if (num_of_elements == 0)
+        {
             return 0;
         }
-        if(num_of_elements >= this->root->sub_tree_size){
+        if (num_of_elements >= this->root->sub_tree_size)
+        {
             return this->root->sum_elemets_sub_tree;
         }
         int sum = 0;

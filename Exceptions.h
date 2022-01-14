@@ -22,10 +22,6 @@ class OutOfBounds : public std::exception
 {
 };
 
-class InfiniteLoop : public std::exception
-{
-};
-
 class FAIL : public std::exception
 {
 };

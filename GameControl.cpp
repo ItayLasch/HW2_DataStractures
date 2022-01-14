@@ -62,7 +62,6 @@ void GameControl::mergeGroups(int GroupID1, int GroupID2)
     {
         throw InvalidInput();
     }
-    // this->Print();
 
     int G1 = GroupsParent->Find(GroupID1);
     int G2 = GroupsParent->Find(GroupID2);
@@ -246,10 +245,4 @@ void GameControl::Quit(GameControl *GC)
     delete GC;
 }
 
-void GameControl::Print()
-{
-    for (int i = 0; i <= K; i++)
-    {
-        Groups[i]->Print();
-    }
-}
+

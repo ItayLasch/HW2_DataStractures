@@ -70,14 +70,6 @@ public:
         }
         return true;
     }
-
-    void Print()
-    {
-        std::cout << "player id: " << player_id << "  ";
-        std::cout << "player score: " << score << "  ";
-        std::cout << "player level: " << level << "  ";
-        std::cout << "Group: " << group_id << std::endl;
-    }
 };
 
 #endif

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "Exceptions.h"
-using namespace std;
+
 
 class UnionFind
 {
@@ -80,7 +80,7 @@ public:
     int Union(int p, int q)
     {
         if (p < 0 || p > this->num_of_elements || q < 0 || q > this->num_of_elements)
-        { ////////for the test change for 1 to 0
+        { 
             throw OutOfBounds();
         }
         int p_parent = WhosYourDaddy(p);
@@ -126,28 +126,6 @@ public:
             p = p_parent;
         }
         return this->parents_arr[temp];
-    }
-
-    void Print()
-    {
-        cout << "       ";
-        for (int i = 0; i < this->num_of_elements; i++)
-        {
-            cout << i << "  ";
-        }
-        cout << endl
-             << "size:  ";
-        for (int i = 0; i < this->num_of_elements; i++)
-        {
-            cout << this->size_arr[i] << "  ";
-        }
-        cout << endl
-             << "parent:";
-        for (int i = 0; i < this->num_of_elements; i++)
-        {
-            cout << this->parents_arr[i] << "  ";
-        }
-        cout << endl;
     }
 };
 

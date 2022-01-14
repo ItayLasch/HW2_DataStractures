@@ -158,28 +158,6 @@ public:
     {
         return this->playersTree;
     }
-
-    void Print()
-    {
-        std::cout << "group_id: " << group_id << std::endl;
-        std::cout << "size of player tree: " << playersTree.getSize() << std::endl;
-        std::cout << "number of players in level 0: " << this->getTotalSumInLevelZero() << std::endl;
-        std::cout << "all the players: " << std::endl;
-        this->playersTree.Inorder([&](std::shared_ptr<Player> p)
-                                  { p->Print(); });
-        for (int i = 0; i < scale; i++)
-        {
-            std::cout << std::endl;
-            std::cout << "players: in score " << i << std::endl;
-            this->players_per_score[i].Inorder([&](std::shared_ptr<Player> p)
-                                               { p->Print(); });
-        }
-
-        std::cout << std::endl
-                  << std::endl
-                  << std::endl
-                  << std::endl;
-    }
 };
 
 #endif

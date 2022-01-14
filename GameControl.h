@@ -42,8 +42,6 @@ public:
     void averageHighestPlayerLevelByGroup(int GroupID, int m, double* avgLevel);
 
     void Quit(GameControl* GC);
-
-    void Print();
 };
 
 

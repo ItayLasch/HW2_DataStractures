@@ -25,12 +25,6 @@ class NodeList
         return this->next;
     }
 
-    friend std::ostream &operator<<(std::ostream &os, const NodeList<T> &nd)
-    {
-        os << nd.key;
-        return os;
-    }
-
     friend HashTable<T>;
 };
 
@@ -40,7 +34,7 @@ class HashTable
     int size;
     NodeList<T> **array;
     int numberOfElements;
-    const int Init_size = 4;
+    const int Init_size = 100;
     
     void Resize()
     {
@@ -260,22 +254,6 @@ public:
         }
 
         throw NotExist();
-    }
-
-    friend std::ostream &operator<<(std::ostream &os, const HashTable<T> &ht)
-    {
-        for (int i = 0; i < ht.size; i++)
-        {
-            os << i << ": ";
-            NodeList<T> *temp = ht.array[i];
-            while (temp != nullptr)
-            {
-                os << "-> " << *temp;
-                temp = temp->GetNext();
-            }
-            os << std::endl;
-        }
-        return os;
     }
 };
 
